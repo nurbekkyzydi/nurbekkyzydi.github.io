@@ -22,6 +22,29 @@
       box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
     }
 
+    /* Навигация */
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+
+    .nav a {
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #4b5563;
+      background: #eef2ff;
+    }
+
+    .nav a:hover {
+      background: #4f46e5;
+      color: #ffffff;
+    }
+
     header {
       display: flex;
       flex-wrap: wrap;
@@ -67,6 +90,16 @@
       line-height: 1.6;
     }
 
+    section {
+      margin-bottom: 32px;
+    }
+
+    section h2 {
+      font-size: 1.4rem;
+      margin-bottom: 8px;
+      color: #1f2937;
+    }
+
     main p {
       margin-bottom: 12px;
     }
@@ -84,6 +117,21 @@
       text-transform: uppercase;
     }
 
+    .button-link {
+      display:inline-block;
+      padding:12px 20px;
+      border-radius:999px;
+      background:#4f46e5;
+      color:white;
+      text-decoration:none;
+      font-weight:600;
+      margin-top:8px;
+    }
+
+    .button-link:hover {
+      opacity: 0.92;
+    }
+
     @media (max-width: 600px) {
       .container {
         margin: 16px;
@@ -93,13 +141,27 @@
         justify-content: center;
         text-align: center;
       }
+      .nav {
+        justify-content: center;
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <header>
-      <!-- Replace "profile.jpg" with the actual file name of your photo -->
+    <!-- Навигация по странице -->
+    <nav class="nav">
+      <a href="#home">Home</a>
+      <a href="#about">About Me</a>
+      <a href="#role">Role of a School Counselor</a>
+      <a href="#contact">Contact</a>
+      <a href="#calendar">Calendar</a>
+      <a href="#flyer">Mental Health Flyer</a>
+      <!-- На будущее можно добавить: <a href="#needs">Needs Assessments</a> -->
+    </nav>
+
+    <!-- Home / Header -->
+    <header id="home">
       <img src="profile.jpg" alt="Photo of Didar Aidar" class="profile-photo">
 
       <div class="header-text">
@@ -113,67 +175,98 @@
     </header>
 
     <main>
-      <p>
-        Welcome to my professional school counseling website. My name is <strong>Didar Aidar</strong>, and I am a School Counseling graduate student at North American University in Houston, Texas. I bring over <strong>11 years of experience</strong> as an English language educator, working with students from diverse cultural and linguistic backgrounds.
-      </p>
-      <p>
-        As a future professional school counselor, I am committed to creating a safe, welcoming, and inclusive environment where every student feels seen, heard, and valued. My areas of interest include academic support, social-emotional learning, and college and career readiness. I believe in partnering with students, families, teachers, and the school community to help each student reach their full potential.
-      </p>
-      <p>
-        This website is a growing space where I will share information about my counseling philosophy, services, and resources for students and families. Throughout the semester, I will continue to add new sections and materials as part of my School Counseling program.
-      </p>
-            <!-- ROLE OF A PROFESSIONAL SCHOOL COUNSELOR -->
-      <section>
+      <!-- Welcome / Intro  (About блок можно считать Home + About) -->
+      <section id="about">
+        <h2>About Me</h2>
+        <p>
+          Welcome to my professional school counseling website. My name is <strong>Didar Aidar</strong>, and I am a
+          School Counseling graduate student at North American University in Houston, Texas. I bring over
+          <strong>11 years of experience</strong> as an English language educator, working with students from diverse
+          cultural and linguistic backgrounds.
+        </p>
+        <p>
+          As a future professional school counselor, I am committed to creating a safe, welcoming, and inclusive
+          environment where every student feels seen, heard, and valued. My areas of interest include academic support,
+          social-emotional learning, and college and career readiness. I believe in partnering with students, families,
+          teachers, and the school community to help each student reach their full potential.
+        </p>
+        <p>
+          This website is a growing space where I will share information about my counseling philosophy, services, and
+          resources for students and families. Throughout the semester, I will continue to add new sections and
+          materials as part of my School Counseling program.
+        </p>
+      </section>
+
+      <!-- ROLE OF A PROFESSIONAL SCHOOL COUNSELOR -->
+      <section id="role">
         <h2>The Role of a Professional School Counselor</h2>
         <p>
-          Professional school counselors support student success across three main domains: academic development, social-emotional growth, and college and career readiness. They collaborate with teachers, administrators, and families to ensure all students receive equitable support and opportunities to thrive.
+          Professional school counselors support student success across three main domains: academic development,
+          social-emotional growth, and college and career readiness. They collaborate with teachers, administrators,
+          and families to ensure all students receive equitable support and opportunities to thrive.
         </p>
 
         <ul>
-          <li><strong>Academic Development:</strong> helping students build study skills, improve organization, manage their time, and set academic goals.</li>
-          <li><strong>Social-Emotional Support:</strong> assisting students with emotional regulation, conflict resolution, stress management, and peer relationship skills.</li>
-          <li><strong>College & Career Readiness:</strong> guiding students in exploring careers, planning for college, understanding financial aid, and preparing for future success.</li>
+          <li><strong>Academic Development:</strong> helping students build study skills, improve organization, manage
+            their time, and set academic goals.</li>
+          <li><strong>Social-Emotional Support:</strong> assisting students with emotional regulation, conflict
+            resolution, stress management, and peer relationship skills.</li>
+          <li><strong>College & Career Readiness:</strong> guiding students in exploring careers, planning for college,
+            understanding financial aid, and preparing for future success.</li>
         </ul>
       </section>
+
       <!-- CONTACT INFORMATION -->
-      <section>
+      <section id="contact">
         <h2>Contact Information</h2>
         <p>Email: <strong>daidar1@na.edu</strong></p>
         <p>Location: Houston, Texas</p>
         <p>Availability: Monday–Friday, 9:00 AM – 4:00 PM</p>
       </section>
-<main>
 
-    <!-- ROLE OF A PROFESSIONAL SCHOOL COUNSELOR -->
+      <!-- CALENDAR -->
+      <section id="calendar">
+        <h2>School Yearly Calendar</h2>
+        <p>
+          Click the link below to view the school yearly calendar for the 2025–2026 school year. This calendar can be
+          used to plan guidance lessons, small groups, testing, and important school events.
+        </p>
 
-    <!-- CONTACT INFORMATION -->
-  </section>
-  <h2>School Yearly Calendar</h2>
-  <p>
-    Click to the link to see the school yearly calendar for 2025-2026 year.
-  </p>
+        <p>
+          <a href="https://www.figma.com/make/VaRVp5DVRxyOxjbfmSXURH/School-Yearly-Calendar?node-id=0-1&p=f&t=Ve7IsKzCaBOFPPt3-0&fullscreen=1"
+             target="_blank"
+             class="button-link">
+            View School Yearly Calendar
+          </a>
+        </p>
+      </section>
 
-  <p>
-    <a href="https://www.figma.com/make/VaRVp5DVRxyOxjbfmSXURH/School-Yearly-Calendar?node-id=0-1&p=f&t=Ve7IsKzCaBOFPPt3-0&fullscreen=1"
-       target="_blank"
-       style="display:inline-block; padding:12px 20px; border-radius:999px; background:#4f46e5; color:white; text-decoration:none; font-weight:600;">
-      View School Yearly Calendar
-    </a>
-  </p>
-<section>
-  <h2>Mental Health & Crisis Resources </h2>
-  <p>
-    Below is the mental health and crisis resources.
-    It includes local mental health services, crisis hotlines, suicide prevention resources, spiritual support,
-    food banks, and emergency shelters for students and families.
-  </p>
+      <!-- MENTAL HEALTH FLYER -->
+      <section id="flyer">
+        <h2>Mental Health & Crisis Resources</h2>
+        <p>
+          This mental health and crisis resources flyer includes local mental health services, crisis hotlines, suicide
+          prevention resources, spiritual support, food banks, and emergency shelters for students and families.
+        </p>
+        <p>
+          You can view or download the full flyer here:
+        </p>
+        <p>
+          <a href="crisis_support_flyer.pdf"
+             target="_blank"
+             class="button-link">
+            View / Download Full Flyer (PDF)
+          </a>
+        </p>
+      </section>
 
-  <iframe src="crisis_support_flyer.pdf"
-          width="100%"
-          height="700"
-          style="border: 1px solid #ccc; border-radius: 12px;">
-  </iframe>
-</section>
+      <!-- На будущее: сюда можно добавить Needs Assessments -->
+      <!--
+      <section id="needs">
+        <h2>Needs Assessments</h2>
+        ...
+      </section>
+      -->
 
     </main>
   </div>
